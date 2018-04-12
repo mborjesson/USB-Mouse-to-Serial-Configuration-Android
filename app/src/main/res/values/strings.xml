@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">USB Mouse to Serial</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="refresh">Refresh</string>
+    <string name="update">Update</string>
+    <string name="rename">Rename</string>
+    <string name="edit">Edit</string>
+    <string name="remove">Remove</string>
+    <string name="settings">Settings</string>
+    <string name="presets">Presets</string>
+    <string name="start_text">Add or select a connection from the menu</string>
+    <string name="error_message">No connection</string>
+
+    <string name="settings_x_title">X-multiplier</string>
+    <string name="settings_y_title">Y-multiplier</string>
+    <string name="settings_swap_title">Swap left/right</string>
+    <string name="settings_multiplier_message">Set to 0 to disable or a negative value to invert movement</string>
+
+    <string name="info_power_title">Power</string>
+    <string name="info_mouse_title">Mouse</string>
+    <string name="info_version_title">Version</string>
+
+    <string name="preset_updated">Preset %s updated</string>
+    <string name="preset_loaded">Preset %s loaded</string>
+    <string name="preset_rename_title">Rename preset</string>
+    <string name="preset_new_title">New preset</string>
+    <string name="preset_new_message">Create a new preset with the current settings</string>
+    <string name="preset_format_x">X: %s</string>
+    <string name="preset_format_y">Y: %s</string>
+    <string name="preset_format_swap">Swap: %s</string>
+
+    <string name="nav_add_connection">Add connection</string>
+    <string name="nav_connections_title">Connections</string>
+
+    <string name="connection_new">New connection</string>
+    <string name="connection_edit">Edit connection</string>
+    <string name="name">Name</string>
+    <string name="connection_hint_host">Host, e.g. http://192.168.1.10:8627</string>
+
+    <string name="remove_connection_title">Remove %s</string>
+    <string name="remove_connection_message">Are you sure you want to remove this connection?</string>
+
+    <string name="message_connection_error">Connection error</string>
+    <string name="message_invalid_host">Invalid host: %s</string>
+    <string name="message_could_not_load_connections">Could not load connections</string>
+    <string name="message_settings_reset_to_default">Settings reset to default</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="on">On</string>
+    <string name="off">Off</string>
+
+    <string name="unknown">Unknown</string>
+
+</resources>
