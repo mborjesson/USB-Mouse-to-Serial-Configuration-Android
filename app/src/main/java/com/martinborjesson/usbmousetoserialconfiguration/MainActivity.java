@@ -1,6 +1,7 @@
 package com.martinborjesson.usbmousetoserialconfiguration;
 
 import android.content.DialogInterface;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -424,6 +425,11 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        try {
+            ((TextView)navigationView.getHeaderView(0).findViewById(R.id.nav_header_title)).setText(getString(R.string.app_name) + " " + getPackageManager().getPackageInfo(getPackageName(), 0).versionName);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
 
         final ViewPager viewPager = (ViewPager) findViewById(R.id.navigation_viewpager);
 
