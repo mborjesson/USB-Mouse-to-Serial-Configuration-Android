@@ -186,7 +186,7 @@ public class SettingsFragment extends Fragment implements ConnectionListener {
 
                     if ("number".equalsIgnoreCase(type)) {
                         final EditText input = new EditText(getActivity());
-                        input.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+                        input.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL | InputType.TYPE_NUMBER_FLAG_SIGNED);
                         input.setRawInputType(Configuration.KEYBOARD_12KEY);
                         input.setText(String.valueOf(d.get("value")));
                         input.setSelection(input.getText().length());
