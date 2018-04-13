@@ -61,7 +61,7 @@ public class InformationFragment extends Fragment implements ConnectionListener 
         data.add(power);
         Map<String, Object> mouse = new HashMap<>();
         mouse.put("title", getString(R.string.info_mouse_title));
-        mouse.put("value", settings.getMouse());
+        mouse.put("value", settings.getMouse() != null ? settings.getMouse() : getString(R.string.unknown));
         mouse.put("enabled", true);
         data.add(mouse);
         Map<String, Object> version = new HashMap<>();
