@@ -402,7 +402,7 @@ public class MainActivity extends AppCompatActivity
         List<Fragment> fragments = getSupportFragmentManager().getFragments();
         if (fragments != null) {
             for (Fragment f : fragments) {
-                if (f.getActivity() != null && f.isAdded() && f instanceof ConnectionListener) {
+                if (f.getActivity() != null && f.isAdded() && f instanceof PresetsListener) {
                     ((PresetsListener) f).onSetPresets(presets);
                 }
             }
