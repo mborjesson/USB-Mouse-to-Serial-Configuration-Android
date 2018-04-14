@@ -198,7 +198,11 @@ public class MainActivity extends AppCompatActivity
         saveConnections();
         refreshConnections();
         if (activeConnection == connection) {
-            closeConnection();
+            if (connections.size() == 1) {
+                openConnection(connections.get(0));
+            } else {
+                closeConnection();
+            }
         }
     }
 
@@ -216,7 +220,7 @@ public class MainActivity extends AppCompatActivity
         final EditText nameInput = new EditText(this);
         nameInput.setMaxLines(1);
         nameInput.setInputType(InputType.TYPE_CLASS_TEXT);
-        nameInput.setHint(getString(R.string.name));
+        nameInput.setHint(getString(R.string.connection_name));
         if (connection != null) {
             nameInput.setText(connection.getName());
             nameInput.setSelection(nameInput.getText().length());

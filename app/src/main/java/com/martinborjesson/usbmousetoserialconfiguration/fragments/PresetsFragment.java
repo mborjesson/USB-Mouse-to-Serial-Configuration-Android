@@ -193,7 +193,7 @@ public class PresetsFragment extends Fragment implements ConnectionListener, Pre
                             final EditText nameInput = new EditText(getActivity());
                             nameInput.setMaxLines(1);
                             nameInput.setInputType(InputType.TYPE_CLASS_TEXT);
-                            nameInput.setHint(R.string.name);
+                            nameInput.setHint(R.string.preset_name);
                             nameInput.setText(preset.getName());
                             nameInput.setSelection(nameInput.getText().length());
                             builder.setView(nameInput);
@@ -266,7 +266,7 @@ public class PresetsFragment extends Fragment implements ConnectionListener, Pre
                 final EditText nameInput = new EditText(getActivity());
                 nameInput.setMaxLines(1);
                 nameInput.setInputType(InputType.TYPE_CLASS_TEXT);
-                nameInput.setHint(R.string.name);
+                nameInput.setHint(R.string.preset_name);
                 builder.setView(nameInput);
 
                 builder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
