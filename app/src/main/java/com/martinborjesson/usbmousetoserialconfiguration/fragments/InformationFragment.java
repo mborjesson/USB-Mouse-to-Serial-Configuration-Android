@@ -50,6 +50,19 @@ public class InformationFragment extends Fragment implements ConnectionListener 
         }
     }
 
+    private String getProtocolName(String protocol) {
+        if ("microsoft".equalsIgnoreCase(protocol)) {
+            return getString(R.string.info_protocol_microsoft);
+        } else if ("logitech".equalsIgnoreCase(protocol)) {
+            return getString(R.string.info_protocol_logitech);
+        } else if ("wheel".equalsIgnoreCase(protocol)) {
+            return getString(R.string.info_protocol_wheel);
+        } else if ("mousesystems".equalsIgnoreCase(protocol)) {
+            return getString(R.string.info_protocol_mousesystems);
+        }
+        return getString(R.string.unknown);
+    }
+
     @Override
     public void onSetMouseSettings(MouseSettings settings) {
         data.clear();
@@ -69,6 +82,13 @@ public class InformationFragment extends Fragment implements ConnectionListener 
         version.put("value", settings.getVersion());
         version.put("enabled", true);
         data.add(version);
+        if (settings.getProtocol() != null) {
+            Map<String, Object> protocol = new HashMap<>();
+            protocol.put("title", getString(R.string.info_protocol_title));
+            protocol.put("value", getProtocolName(settings.getProtocol()));
+            protocol.put("enabled", true);
+            data.add(protocol);
+        }
 
         if (adapter != null) {
             adapter.notifyDataSetChanged();

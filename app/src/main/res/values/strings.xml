@@ -23,6 +23,11 @@
     <string name="info_power_title">Power</string>
     <string name="info_mouse_title">Mouse</string>
     <string name="info_version_title">Version</string>
+    <string name="info_protocol_title">Protocol</string>
+    <string name="info_protocol_microsoft">Microsoft 2-button mouse</string>
+    <string name="info_protocol_logitech">Logitech 3-button mouse</string>
+    <string name="info_protocol_wheel">Microsoft 3-button wheel mouse</string>
+    <string name="info_protocol_mousesystems">Mouse Systems</string>
 
     <string name="preset_updated">Preset %s updated</string>
     <string name="preset_loaded">Preset %s loaded</string>

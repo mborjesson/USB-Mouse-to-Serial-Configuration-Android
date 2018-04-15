@@ -82,12 +82,20 @@ public class ConnectionManager {
                     try {
                         s.setPower(json.getBoolean("power"));
                         s.setVersion(json.getString("version"));
-                        s.setMouse(json.getJSONObject("info").getString("mouse"));
+
+                        JSONObject info = json.optJSONObject("info");
+                        if (info != null) {
+                            s.setMouse(info.optString("mouse", null));
+                            s.setProtocol(info.optString("protocol", null));
+                        }
+
                         JSONObject settings = json.optJSONObject("settings");
                         if (settings != null) {
-                            s.setX(settings.getDouble("x"));
-                            s.setY(settings.getDouble("y"));
-                            s.setSwap(settings.getBoolean("swap"));
+                            s.setX(settings.has("x") ? settings.getDouble("x") : null);
+                            s.setY(settings.has("y") ? settings.getDouble("y") : null);
+                            s.setSwap(settings.has("swap") ? settings.getBoolean("swap") : null);
+
+                            s.setRate(settings.has("rate") ? settings.getDouble("rate") : null);
                         }
                         // update mouse settings
                         callback.onConnectionSuccess(s);

@@ -6,7 +6,9 @@ public class MouseSettings implements Serializable, Cloneable {
     static final long serialVersionUID = 57834579834792194L;
     private boolean power = false;
     private String mouse = null;
+    private String protocol = null;
     private String version = null;
+    private Double rate;
     private Double x;
     private Double y;
     private Boolean swap;
@@ -43,6 +45,24 @@ public class MouseSettings implements Serializable, Cloneable {
 
     public String getMouse() {
         return mouse;
+    }
+
+    public MouseSettings setProtocol(String protocol) {
+        this.protocol = protocol;
+        return this;
+    }
+
+    public String getProtocol() {
+        return protocol;
+    }
+
+    public MouseSettings setRate(Double rate) {
+        this.rate = rate;
+        return this;
+    }
+
+    public Double getRate() {
+        return rate;
     }
 
     public MouseSettings setVersion(String version) {
