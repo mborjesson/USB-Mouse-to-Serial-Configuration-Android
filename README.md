@@ -1,5 +1,5 @@
 # USB Mouse to Serial Configuration
-Android app to configure USB Mouse to Serial remotely using the Remote Configuration API.
+Android app to configure [USB Mouse to Serial](https://github.com/mborjesson/USB-Mouse-to-Serial) remotely using the Remote Configuration API.
 
 ![Screenshot](./.readme/screenshot.png)
 
